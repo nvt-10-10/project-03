@@ -19,27 +19,43 @@ body {
 :root {
     --background-head: #10375c;
 }
-a {
-    text-decoration: none;
-}
-
-.btn {
-    cursor: pointer;
-    opacity: 0.9;
-}
 
 .container {
     width: 1170px;
     max-width: calc(100% -48px);
     margin: 0 auto;
 }
+a {
+    text-decoration: none;
+}
+
+.btn {
+    --height: 60px;
+    display: inline-block;
+    min-width: 205px;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+    font-size: 1.6rem;
+    border-radius: 999px;
+    border: 1px solid #2e80ce;
+    line-height: var(--height);
+    background: #2e80ce;
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
 /* =================================== */
 /* Header */
 .header {
+    padding-top: 30px;
     min-height: 100vh;
     background: var(--background-head);
 }
-
+/* Logo */
 .logo {
     display: inline-flex;
     position: relative;
@@ -83,4 +99,51 @@ a {
     font-weight: 300;
     font-size: 1.2em;
     line-height: 1.4em;
+}
+/* header top */
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.action__login,
+.navbar__link {
+    padding: 4px 21px;
+    text-align: center;
+    font-size: 1.6rm;
+    font-weight: 300;
+    line-height: 28px;
+    color: #c9d2da;
+}
+
+.navbar__link:hover {
+    color: #ffffff;
+}
+
+.navbar__link--active {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    text-shadow: 1px 0 0 currentColor;
+    color: #ffffff;
+}
+
+.navbar__link--active::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+.action_signup {
+    --height: 44px;
+    min-width: 104px;
 }
