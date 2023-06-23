@@ -211,12 +211,12 @@ a:hover {
     height: 540px;
     border-radius: 6px;
     object-fit: cover;
-    /* z-index: 1; */
+    z-index: 1;
 }
 
 .hero__img:last-child {
     width: 210px;
     height: 410px;
     margin-left: -6px;
-    z-index: -1;
+    z-index: 0;
 }
